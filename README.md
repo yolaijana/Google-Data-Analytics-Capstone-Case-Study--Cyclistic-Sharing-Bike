@@ -381,6 +381,7 @@ end_station_name                  num_rider
 
 
 ### Create the Visualizations
+#### Pie chart
 
 ```{r Create pie chart, echo=FALSE}
 # Add percentage column
@@ -400,10 +401,8 @@ ggplot(num_rides_by_type, aes(x = "", y = num_rides, fill = member_casual)) +
   ) +
   theme_void()
 ```
-  
+<img src='./Viz/Pie chart.png'>
 
-
-#### Pie chart
 
 This pie chart I created to explore the Number of Rides for the Annual Members vs Casual Riders
 
@@ -418,7 +417,7 @@ ggplot(common_start_station, aes(x =  reorder(start_station_name, -num_rides), y
   scale_y_continuous(breaks = seq(0, max(common_start_station$num_rides), by = 25000)) + # Set y-axis breaks
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) # Rotate x-axis labels for readability
 ```
-
+<img src='./Viz/Bar - start Stations (1).png'>
 
 ```{r Create Bar Chart2, echo=FALSE}
 ggplot(common_end_station, aes(x =  reorder(end_station_name, -num_rides), y = num_rides, fill = "red")) +
@@ -428,7 +427,7 @@ ggplot(common_end_station, aes(x =  reorder(end_station_name, -num_rides), y = n
   scale_y_continuous(breaks = seq(0, max(common_end_station$num_rides), by = 25000)) + # Set y-axis breaks
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) # Rotate x-axis labels for readability
 ```
-    
+<img src='./Viz/Bar - end Stations (1).png'>    
 
 
 #### Bar chart to explore the Top 5 common Stations the Casual Rider Start from
@@ -472,7 +471,7 @@ final_data %>%
     plot.caption = element_text(size = 10, hjust = 1, color = "gray")
   )
 ```
-
+<img src='./Viz/Bar - rides by casual.png'>
 This Histogram chart exploring the number of rides has been taken by the casual riders per month to find the maximum number of rides its been taken in which months 
 
 ### My Recommondations

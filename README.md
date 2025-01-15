@@ -106,9 +106,17 @@ nov_data_2024 <- read_csv("C:/Users/yolai/Downloads/202411-divvy-tripdata.csv")
 I checked the files one by one using the str() function to verify if there is un consistency in the dataset, So I found that the columns start_station_id and end_station_id are double datatype in the datasets starting from Apr 2020 - Nov 2020 while these fields are character datatype in the rest of data from Dec 2020 - Nov 2024.
 
 ```{r Explore data}
-str(apr_data_2020) 
+str(apr_data_2020)
 ```
-I repeated for all the data files.
+
+```{r Explore data}
+str(may_data_2020)  
+```
+
+```{r Explore data}
+str(Jun_data_2020)  
+```
+I repeated it for all the data files.
 
 
 #### Solve Tha Data Consistency Issue

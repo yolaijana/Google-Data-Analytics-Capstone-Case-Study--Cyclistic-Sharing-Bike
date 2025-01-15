@@ -417,7 +417,6 @@ ggplot(num_rides_by_type, aes(x = "", y = num_rides, fill = member_casual)) +
   theme_void()
 ```
 <img src='./Viz/Pie chart.png'>
-
 This pie chart I created to explore the Number of Rides for the Annual Members vs Casual Riders
 
 
@@ -433,8 +432,8 @@ ggplot(common_start_station, aes(x =  reorder(start_station_name, -num_rides), y
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 <img src='./Viz/Bar - start Stations (1).png'>
-
 This bar chart I created to explore the Top 5 common Stations the Casual Rider are staring their rides from to use these stations for the marketing campaign later
+
 
 #### Bar chart to explore the Top 5 common Stations the Casual Rider End to
 
@@ -447,7 +446,6 @@ ggplot(common_end_station, aes(x =  reorder(end_station_name, -num_rides), y = n
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
 ```
 <img src='./Viz/Bar - end Stations (1).png'>    
-
 This bar chart I created to explore the Top 5 common Stations the Casual Rider end their rides at to use them also for the marketing campaign, and I discovered that the top 4 stations the casual riders start from are the same top 4 stations end to.
  
 
@@ -484,8 +482,8 @@ final_data %>%
   )
 ```
 <img src='./Viz/Bar - rides by casual.png'>
-
 This Histogram chart exploring the number of rides has been taken by the casual riders per month to find the maximum number of rides its been taken in which months 
+
 
 ### My Recommondations
 

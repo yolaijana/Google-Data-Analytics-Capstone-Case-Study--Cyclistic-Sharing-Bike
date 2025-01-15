@@ -179,6 +179,13 @@ str(clean_data)
 head(clean_data)
 ```
 
+#### Exploring the Data more deeper
+
+I Explored the Data by **glimpse()** function
+
+```{r Check the data}
+glimpse(clean_data)
+```
 
 #### Remove the unnecessary fields
 I removed the latitude and longitude fields from the data

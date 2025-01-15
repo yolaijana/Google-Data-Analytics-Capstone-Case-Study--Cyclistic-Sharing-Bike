@@ -383,7 +383,7 @@ end_station_name                  num_rider
 ### Create the Visualizations
 #### Pie chart
 
-```{r Create pie chart, echo=FALSE}
+```{r Create pie chart}
 # Add percentage column
 num_rides_by_type <- num_rides_by_type %>%
   mutate(percentage = num_rides / sum(num_rides) * 100)
@@ -408,7 +408,7 @@ This pie chart I created to explore the Number of Rides for the Annual Members v
 
 
 
-```{r Create Bar Chart1, echo=FALSE}
+```{r Create Bar Chart1}
 ggplot(common_start_station, aes(x =  reorder(start_station_name, -num_rides), y = num_rides, fill = "blue")) +
   geom_bar(stat = "identity") +
   labs(title = "Top 5 Common Start Stations",
@@ -419,13 +419,13 @@ ggplot(common_start_station, aes(x =  reorder(start_station_name, -num_rides), y
 ```
 <img src='./Viz/Bar - start Stations (1).png'>
 
-```{r Create Bar Chart2, echo=FALSE}
+```{r Create Bar Chart2}
 ggplot(common_end_station, aes(x =  reorder(end_station_name, -num_rides), y = num_rides, fill = "red")) +
   geom_bar(stat = "identity") +
   labs(title = "Top 5 Common End Stations",
        x = "End Station Name", y = "Number of Rides") +
   scale_y_continuous(breaks = seq(0, max(common_end_station$num_rides), by = 25000)) + # Set y-axis breaks
-  theme(axis.text.x = element_text(angle = 45, hjust = 1)) # Rotate x-axis labels for readability
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
 ```
 <img src='./Viz/Bar - end Stations (1).png'>    
 
@@ -441,7 +441,7 @@ This pie chart I created to explore the Top 5 common Stations the Casual Rider e
 
 #### Histogram chart to explore the number of rides taken by the casual riders per month
 
-```{r Create bar chart3, echo=FALSE}
+```{r Create bar chart3}
 final_data %>%
   group_by(month, member_casual) %>%
   summarise(num_rides = n(), .groups = 'drop') %>%

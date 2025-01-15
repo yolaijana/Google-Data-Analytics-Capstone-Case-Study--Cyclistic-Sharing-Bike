@@ -35,7 +35,7 @@ library(lubridate)
 library(ggplot2)
 ```
 
-Getting my Data Ready in R Studio.
+### Getting my Data Ready in R Studio.
 After downloading the all data files I start importing them by using the read_csv() function from the readr package.
 
 ```{r Importing data}
